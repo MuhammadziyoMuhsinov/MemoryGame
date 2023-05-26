@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentGame">
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="score: 0"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15ssp"
+        android:gravity="center"
+        android:fontFamily="@font/font_yeseva_one_regular"
+        app:layout_constraintBottom_toTopOf="@id/line_1"
+        app:layout_constraintRight_toLeftOf="@id/lottie"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/line_1"
+        app:layout_constraintLeft_toRightOf="@id/score"
+        app:layout_constraintRight_toLeftOf="@id/task"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/lottie_timer" />
+
+    <TextView
+        android:id="@+id/task"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="task: 0"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15ssp"
+        android:gravity="center"
+        android:fontFamily="@font/font_yeseva_one_regular"
+        app:layout_constraintBottom_toTopOf="@id/line_1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/lottie"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <ImageView
+        android:id="@+id/image_1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/yulduzcha"
+        app:layout_constraintBottom_toTopOf="@id/image_3"
+        app:layout_constraintHeight_percent="0.25"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/image_2"
+        app:layout_constraintTop_toBottomOf="@id/line_1"
+
+        app:layout_constraintWidth_percent="0.35" />
+
+    <ImageView
+        android:id="@+id/image_2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/yulduzcha"
+        app:layout_constraintBottom_toTopOf="@id/image_4"
+        app:layout_constraintHeight_percent="0.25"
+        app:layout_constraintLeft_toRightOf="@id/image_1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line_1"
+        app:layout_constraintWidth_percent="0.35" />
+
+    <ImageView
+        android:id="@+id/image_3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/yulduzcha"
+        app:layout_constraintBottom_toTopOf="@id/image_5"
+        app:layout_constraintHeight_percent="0.25"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/image_4"
+        app:layout_constraintTop_toBottomOf="@id/image_1"
+        app:layout_constraintWidth_percent="0.35" />
+
+    <ImageView
+        android:id="@+id/image_4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/yulduzcha"
+        app:layout_constraintBottom_toTopOf="@+id/image_6"
+        app:layout_constraintHeight_percent="0.25"
+        app:layout_constraintLeft_toRightOf="@id/image_3"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_2"
+        app:layout_constraintWidth_percent="0.35" />
+
+    <ImageView
+        android:id="@+id/image_5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/yulduzcha"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.25"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/image_6"
+        app:layout_constraintTop_toBottomOf="@+id/image_3"
+        app:layout_constraintWidth_percent="0.35" />
+
+    <ImageView
+        android:id="@+id/image_6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/yulduzcha"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.25"
+        app:layout_constraintLeft_toRightOf="@id/image_5"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_3"
+        app:layout_constraintWidth_percent="0.35" />
+
+    <View
+        android:id="@+id/xira"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:visibility="invisible"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
